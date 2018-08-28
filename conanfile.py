@@ -10,7 +10,7 @@ class Ooh323cConan(ConanFile):
     name = "ooh323c"
     version = "91c8760"
     description = "ooh323c"
-    url = "http://github.com/bincrafters/conan-ooh323c"
+    url = "http://github.com/theirix/conan-ooh323c"
     homepage = "https://github.com/traviscross/ooh323c"
     license = "Custom"
     exports = ["LICENSE.md"]
@@ -41,7 +41,7 @@ class Ooh323cConan(ConanFile):
 
     def package(self):
         self.copy("COPYING", dst="licenses", src=self.source_subfolder)
-        
+
         self.copy("*.h", dst="include", src=os.path.join(self.source_subfolder, "src"), keep_path=False)
 
         if self.options.shared:
