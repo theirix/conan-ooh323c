@@ -9,7 +9,7 @@ The packages generated with this **conanfile** can be found in conan.io.
 
 ## Build packages
 
-    $ pip install conan_package_tools
+    $ pip install conan_package_tools bincrafters_package_tools
     $ python build.py
     
 ## Upload packages to server
