@@ -8,13 +8,13 @@ from conans import ConanFile, CMake, tools
 
 class Ooh323cConan(ConanFile):
     name = "ooh323c"
-    version = "91c8760"
+    version = "91c8760p1"
     description = "ooh323c"
     url = "http://github.com/theirix/conan-ooh323c"
     homepage = "https://github.com/traviscross/ooh323c"
     license = "Custom"
     exports = ["LICENSE.md"]
-    exports_sources = ['CMakeLists.txt']
+    exports_sources = ['CMakeLists.txt', 'mem1.patch']
     generators = 'cmake'
     source_subfolder = "source_subfolder"
     settings = "os", "compiler", "build_type", "arch"
@@ -30,6 +30,7 @@ class Ooh323cConan(ConanFile):
                   os.path.join(self.source_subfolder, "CMakeListsOriginal.txt"))
         shutil.copy("CMakeLists.txt",
                     os.path.join(self.source_subfolder, "CMakeLists.txt"))
+        tools.patch(patch_file='mem1.patch', base_path=self.source_subfolder)
 
     def configure(self):
         del self.settings.compiler.libcxx
