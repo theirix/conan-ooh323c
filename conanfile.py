@@ -8,10 +8,10 @@ from conans import ConanFile, CMake, tools
 
 class Ooh323cConan(ConanFile):
     name = "ooh323c"
-    version = "91c8760"
+    version = "da48d3f"
     description = "ooh323c"
     url = "http://github.com/theirix/conan-ooh323c"
-    homepage = "https://github.com/traviscross/ooh323c"
+    homepage = "https://github.com/theirix/ooh323c"
     license = "Custom"
     exports = ["LICENSE.md"]
     exports_sources = ['CMakeLists.txt']
@@ -22,7 +22,7 @@ class Ooh323cConan(ConanFile):
     default_options = "shared=False", "fPIC=True"
 
     def source(self):
-        self.run("git clone https://github.com/traviscross/ooh323c %s" % self.source_subfolder)
+        self.run("git clone https://github.com/theirix/ooh323c %s" % self.source_subfolder)
         with tools.chdir(self.source_subfolder):
             self.run("git checkout %s" % self.version)
 
