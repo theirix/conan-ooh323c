@@ -8,7 +8,7 @@ from conans import ConanFile, CMake, tools
 
 class Ooh323cConan(ConanFile):
     name = "ooh323c"
-    version = "da48d3f"
+    version = "dc265f1"
     description = "ooh323c"
     url = "http://github.com/theirix/conan-ooh323c"
     homepage = "https://github.com/theirix/ooh323c"
